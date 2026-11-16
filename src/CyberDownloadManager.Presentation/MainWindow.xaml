@@ -1,0 +1,65 @@
+<Window
+    x:Class="CyberDownloadManager.Presentation.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Cyber Download Manager">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <!-- Custom Title Bar -->
+            <RowDefinition Height="Auto" />
+            <!-- Main Content Area -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Custom App Header / TitleBar area -->
+        <Grid x:Name="AppTitleBar" Grid.Row="0" Height="48" Padding="16,0,16,0" Background="{ThemeResource CyberHeaderGradient}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Brand Logo & Title -->
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Spacing="10">
+                <Border Width="28" Height="28" CornerRadius="6" Background="{ThemeResource CyberProgressBarBrush}">
+                    <FontIcon Glyph="&#xE896;" FontSize="16" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+                <TextBlock Text="CYBER DOWNLOAD MANAGER" FontWeight="Bold" FontSize="13" CharacterSpacing="80" VerticalAlignment="Center" Foreground="{ThemeResource CyberPrimaryBrush}"/>
+            </StackPanel>
+
+            <!-- Quick Action: New Download -->
+            <Button x:Name="BtnNewDownload" Grid.Column="1" Margin="24,0,0,0" Padding="12,6,16,6" CornerRadius="8" Background="{ThemeResource CyberProgressBarBrush}" Foreground="White" Click="BtnNewDownload_Click" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <FontIcon Glyph="&#xE710;" FontSize="12"/>
+                    <TextBlock Text="New Download" FontWeight="SemiBold" FontSize="12"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Center Search Bar -->
+            <AutoSuggestBox x:Name="SearchBox" Grid.Column="2" PlaceholderText="Search downloads, URLs, file types..." Width="320" HorizontalAlignment="Center" VerticalAlignment="Center" QueryIcon="Find"/>
+
+        </Grid>
+
+        <!-- Main Navigation & Shell -->
+        <NavigationView x:Name="NavView"
+                        Grid.Row="1"
+                        SelectionChanged="NavView_SelectionChanged"
+                        IsSettingsVisible="True"
+                        PaneTitle="Cyber Navigation"
+                        CompactPaneLength="52"
+                        OpenPaneLength="220"
+                        IsBackButtonVisible="Collapsed">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Dashboard" Tag="Dashboard" Icon="Home" />
+                <NavigationViewItem Content="Active Transfers" Tag="ActiveTransfers" Icon="Download" />
+                <NavigationViewItem Content="Completed" Tag="Completed" Icon="Accept" />
+                <NavigationViewItem Content="Queue Manager" Tag="Queue" Icon="List" />
+                <NavigationViewItem Content="Analytics &amp; Graphs" Tag="Analytics" Icon="Favorite" />
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame" />
+        </NavigationView>
+    </Grid>
+</Window>

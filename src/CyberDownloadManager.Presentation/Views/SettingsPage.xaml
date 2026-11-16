@@ -1,0 +1,89 @@
+<Page
+    x:Class="CyberDownloadManager.Presentation.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="28">
+        <StackPanel Spacing="24" MaxWidth="800" HorizontalAlignment="Left">
+            <!-- Header -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="System Settings &amp; Preferences" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" Foreground="{ThemeResource CyberPrimaryBrush}"/>
+                <TextBlock Text="Configure download directories, connection engine, themes, and network proxies" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+            </StackPanel>
+
+            <!-- Card 1: Storage & Directory -->
+            <Border Padding="20" Background="{ThemeResource CyberCardGlassBrush}" CornerRadius="12" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="16">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE8B7;" FontSize="18" Foreground="{ThemeResource CyberPrimaryBrush}"/>
+                        <TextBlock Text="Storage &amp; Directories" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiBold"/>
+                    </StackPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="DownloadPathTextBox" Grid.Column="0" Header="Default Download Path" Text="{Binding DownloadPath, Mode=TwoWay}" Margin="0,0,10,0" MinWidth="280"/>
+                        <Button Grid.Column="1" Content="Browse..." Click="BrowseDownloadPath_Click" VerticalAlignment="Bottom" Height="36" Margin="0,0,8,0"/>
+                        <Button Grid.Column="2" Content="Save Settings" Click="SaveSettings_Click" VerticalAlignment="Bottom" Height="36"/>
+                    </Grid>
+
+                    <ToggleSwitch Header="Automatically Create Subfolders by File Category (Videos, Software, Documents)" IsOn="True"/>
+                    <ToggleSwitch Header="Prompt for Download Location on New Task" IsOn="False"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Card 2: Multi-Thread Engine -->
+            <Border Padding="20" Background="{ThemeResource CyberCardGlassBrush}" CornerRadius="12" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="16">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE945;" FontSize="18" Foreground="{ThemeResource CyberSecondaryBrush}"/>
+                        <TextBlock Text="Accelerated Connection Engine" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiBold"/>
+                    </StackPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="Default Connections per Download Task:" FontWeight="SemiBold"/>
+                            <TextBlock Text="Splits files into parallel chunk streams for maximum transfer speed" FontSize="11" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                        </StackPanel>
+                        <ComboBox x:Name="ConnectionsComboBox" Grid.Column="1" SelectedIndex="3" Width="180">
+                            <ComboBoxItem Content="4 Threads"/>
+                            <ComboBoxItem Content="8 Threads"/>
+                            <ComboBoxItem Content="12 Threads"/>
+                            <ComboBoxItem Content="16 Threads (Recommended)"/>
+                            <ComboBoxItem Content="32 Threads (Extreme)"/>
+                        </ComboBox>
+                    </Grid>
+
+                    <ToggleSwitch Header="Enable Dynamic Buffer Allocation (Zero-Copy Disk Direct I/O)" IsOn="True"/>
+                    <ToggleSwitch Header="Auto-Resume Interrupted Stream Connections" IsOn="True"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Card 3: Theme & Aesthetics -->
+            <Border Padding="20" Background="{ThemeResource CyberCardGlassBrush}" CornerRadius="12" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="16">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE790;" FontSize="18" Foreground="{ThemeResource CyberSuccessBrush}"/>
+                        <TextBlock Text="Visual Theme &amp; Glassmorphism" Style="{StaticResource SubtitleTextBlockStyle}" FontWeight="SemiBold"/>
+                    </StackPanel>
+
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Window Backdrop Style" FontWeight="SemiBold"/>
+                        <RadioButton Content="Mica Alt (Windows 11 Glass)" IsChecked="True"/>
+                        <RadioButton Content="Desktop Acrylic (Translucent Glass)"/>
+                        <RadioButton Content="Cyber Dark Solid (High Contrast)"/>
+                    </StackPanel>
+
+                    <ToggleSwitch Header="Enable Neon Glow Accents &amp; Progress Bar Gradients" IsOn="True"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

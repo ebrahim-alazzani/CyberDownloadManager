@@ -1,0 +1,36 @@
+<Application
+    x:Class="CyberDownloadManager.Presentation.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Cyber Glass Theme Colors & Brushes -->
+            <SolidColorBrush x:Key="CyberPrimaryBrush" Color="#00E5FF"/>
+            <SolidColorBrush x:Key="CyberSecondaryBrush" Color="#7C4DFF"/>
+            <SolidColorBrush x:Key="CyberAccentGlowBrush" Color="#00F0FF"/>
+            <SolidColorBrush x:Key="CyberSuccessBrush" Color="#00E676"/>
+            <SolidColorBrush x:Key="CyberWarningBrush" Color="#FFEA00"/>
+            <SolidColorBrush x:Key="CyberErrorBrush" Color="#FF1744"/>
+
+            <!-- Linear Gradients -->
+            <LinearGradientBrush x:Key="CyberHeaderGradient" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#1A00E5FF" Offset="0.0"/>
+                <GradientStop Color="#1A7C4DFF" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="CyberCardGlassBrush" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#2A1E293B" Offset="0.0"/>
+                <GradientStop Color="#1A0F172A" Offset="1.0"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="CyberProgressBarBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+                <GradientStop Color="#00E5FF" Offset="0.0"/>
+                <GradientStop Color="#7C4DFF" Offset="1.0"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

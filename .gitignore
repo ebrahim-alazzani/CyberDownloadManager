@@ -1,0 +1,27 @@
+## Visual Studio & .NET Build Artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+packages/
+TestResults/
+
+## Exclude stitch and sketch design folders
+*stitch*
+*sketch*
+
+## Exclude local AI prompt / rules files
+CDM_AI_DEVELOPMENT_RULES.md
+code.md
+Cyber_Download_Manager_Design
+
+## Logs and temporary files
+*.log
+*.tmp
+PublishOutput/
+publish/

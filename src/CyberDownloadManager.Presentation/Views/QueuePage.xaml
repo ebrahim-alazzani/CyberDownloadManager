@@ -1,0 +1,73 @@
+<Page
+    x:Class="CyberDownloadManager.Presentation.Views.QueuePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="28">
+        <StackPanel Spacing="20">
+
+            <!-- Header -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Spacing="4">
+                    <TextBlock Text="Automated Download Queue" Style="{StaticResource TitleTextBlockStyle}" FontWeight="Bold" Foreground="{ThemeResource CyberSecondaryBrush}"/>
+                    <TextBlock Text="Sequential batch downloading, time scheduling, and bandwidth prioritization" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                    <Button Style="{StaticResource AccentButtonStyle}" Click="StartQueue_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <FontIcon Glyph="&#xE768;" FontSize="12"/>
+                            <TextBlock Text="Start Next"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!-- Dynamic Queue List -->
+            <ItemsControl ItemsSource="{Binding QueuedItems}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="18" Margin="0,0,0,12" Background="{ThemeResource CyberCardGlassBrush}" CornerRadius="12" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="14">
+                                    <Border Width="40" Height="40" CornerRadius="8" Background="#1A7C4DFF">
+                                        <FontIcon Glyph="&#xE8D2;" FontSize="20" Foreground="{ThemeResource CyberSecondaryBrush}"/>
+                                    </Border>
+                                    <StackPanel VerticalAlignment="Center" Spacing="2">
+                                        <TextBlock Text="{Binding FileName}" FontWeight="Bold" FontSize="14"/>
+                                        <TextBlock Text="{Binding Url}" FontSize="11" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                                    <Button Content="Pause" Click="Pause_Click"/>
+                                    <Button Content="Resume" Click="Resume_Click"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!-- Empty Queue Banner -->
+            <Border Padding="32" Background="{ThemeResource CyberCardGlassBrush}" CornerRadius="12" BorderThickness="1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" Visibility="{Binding EmptyQueueVisibility}">
+                <StackPanel Spacing="12" HorizontalAlignment="Center">
+                    <FontIcon Glyph="&#xE8D2;" FontSize="36" Foreground="{ThemeResource CyberSecondaryBrush}"/>
+                    <TextBlock Text="No Queued Downloads" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Add new downloads to queue them automatically." Foreground="{ThemeResource TextFillColorSecondaryBrush}" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

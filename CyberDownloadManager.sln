@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{35FDC3BF-60D9-49E6-B48D-19FD3E7F04F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Domain", "src\CyberDownloadManager.Domain\CyberDownloadManager.Domain.csproj", "{6BDDB6FD-A2C5-4A18-88A3-35211811BAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Application", "src\CyberDownloadManager.Application\CyberDownloadManager.Application.csproj", "{B9FD0CA1-C17A-47D7-86B7-25DDD003A395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Infrastructure", "src\CyberDownloadManager.Infrastructure\CyberDownloadManager.Infrastructure.csproj", "{FE8C9F14-AC56-4F17-BE64-A05AF3235C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Shared", "src\CyberDownloadManager.Shared\CyberDownloadManager.Shared.csproj", "{C6A377F7-9AF3-478D-9C73-E6B97EC1C1C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Presentation", "src\CyberDownloadManager.Presentation\CyberDownloadManager.Presentation.csproj", "{E0BC7D6C-4F07-41E8-BF97-620BC960AD06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{760C3A1E-2F7D-4570-A803-6206DA597507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Domain.Tests", "tests\CyberDownloadManager.Domain.Tests\CyberDownloadManager.Domain.Tests.csproj", "{8D2CB030-6069-443F-9BF9-82D6BA8BE195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Application.Tests", "tests\CyberDownloadManager.Application.Tests\CyberDownloadManager.Application.Tests.csproj", "{358BE31D-39D2-4A4C-91AF-3BBCA66923B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDownloadManager.Infrastructure.Tests", "tests\CyberDownloadManager.Infrastructure.Tests\CyberDownloadManager.Infrastructure.Tests.csproj", "{03E8A15E-DF31-4CBE-A447-453C87EC8D09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BDDB6FD-A2C5-4A18-88A3-35211811BAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDDB6FD-A2C5-4A18-88A3-35211811BAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDDB6FD-A2C5-4A18-88A3-35211811BAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDDB6FD-A2C5-4A18-88A3-35211811BAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FD0CA1-C17A-47D7-86B7-25DDD003A395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FD0CA1-C17A-47D7-86B7-25DDD003A395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FD0CA1-C17A-47D7-86B7-25DDD003A395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FD0CA1-C17A-47D7-86B7-25DDD003A395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8C9F14-AC56-4F17-BE64-A05AF3235C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8C9F14-AC56-4F17-BE64-A05AF3235C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8C9F14-AC56-4F17-BE64-A05AF3235C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8C9F14-AC56-4F17-BE64-A05AF3235C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A377F7-9AF3-478D-9C73-E6B97EC1C1C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A377F7-9AF3-478D-9C73-E6B97EC1C1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A377F7-9AF3-478D-9C73-E6B97EC1C1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A377F7-9AF3-478D-9C73-E6B97EC1C1C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BC7D6C-4F07-41E8-BF97-620BC960AD06}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{E0BC7D6C-4F07-41E8-BF97-620BC960AD06}.Debug|Any CPU.Build.0 = Debug|x64
+		{E0BC7D6C-4F07-41E8-BF97-620BC960AD06}.Release|Any CPU.ActiveCfg = Release|x64
+		{E0BC7D6C-4F07-41E8-BF97-620BC960AD06}.Release|Any CPU.Build.0 = Release|x64
+		{8D2CB030-6069-443F-9BF9-82D6BA8BE195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2CB030-6069-443F-9BF9-82D6BA8BE195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2CB030-6069-443F-9BF9-82D6BA8BE195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2CB030-6069-443F-9BF9-82D6BA8BE195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358BE31D-39D2-4A4C-91AF-3BBCA66923B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358BE31D-39D2-4A4C-91AF-3BBCA66923B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358BE31D-39D2-4A4C-91AF-3BBCA66923B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358BE31D-39D2-4A4C-91AF-3BBCA66923B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E8A15E-DF31-4CBE-A447-453C87EC8D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E8A15E-DF31-4CBE-A447-453C87EC8D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E8A15E-DF31-4CBE-A447-453C87EC8D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E8A15E-DF31-4CBE-A447-453C87EC8D09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BDDB6FD-A2C5-4A18-88A3-35211811BAD9} = {35FDC3BF-60D9-49E6-B48D-19FD3E7F04F9}
+		{B9FD0CA1-C17A-47D7-86B7-25DDD003A395} = {35FDC3BF-60D9-49E6-B48D-19FD3E7F04F9}
+		{FE8C9F14-AC56-4F17-BE64-A05AF3235C9B} = {35FDC3BF-60D9-49E6-B48D-19FD3E7F04F9}
+		{C6A377F7-9AF3-478D-9C73-E6B97EC1C1C0} = {35FDC3BF-60D9-49E6-B48D-19FD3E7F04F9}
+		{E0BC7D6C-4F07-41E8-BF97-620BC960AD06} = {35FDC3BF-60D9-49E6-B48D-19FD3E7F04F9}
+		{8D2CB030-6069-443F-9BF9-82D6BA8BE195} = {760C3A1E-2F7D-4570-A803-6206DA597507}
+		{358BE31D-39D2-4A4C-91AF-3BBCA66923B1} = {760C3A1E-2F7D-4570-A803-6206DA597507}
+		{03E8A15E-DF31-4CBE-A447-453C87EC8D09} = {760C3A1E-2F7D-4570-A803-6206DA597507}
+	EndGlobalSection
+EndGlobal
